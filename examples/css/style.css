@@ -279,8 +279,8 @@ body, button, input, textarea, select, option, pre, optgroup {
 
 .m-ui-dial {
     position: relative;
-    width: 499px;
-    height: 499px;
+    width: 399px;
+    height: 399px;
     margin: 0 auto;
     background: url("../images/dial_bg.png") no-repeat center;
     background-size: 100%
@@ -294,8 +294,8 @@ body, button, input, textarea, select, option, pre, optgroup {
     top: 50%;
     left: 50%;
     display: block;
-    width: 150px;
-    height: 238px;
+    width: 120px;
+    height: 190px;
     margin: -119px 0 0 -75px;
     -webkit-transform-origin: 75px 139px;
     transform-origin: 75px 139px
@@ -336,8 +336,8 @@ body, button, input, textarea, select, option, pre, optgroup {
 
 .m-ui-tiger {
     position: relative;
-    width: 640px;
-    height: 432px;
+    width: 512px;
+    height: 346px;
     margin: 20px auto;
     background: url("../images/tiger_bg.png") no-repeat
 }
