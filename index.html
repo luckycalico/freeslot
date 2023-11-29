@@ -3,71 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Slots games for Filipinos</title>
+    <title>游戏展示页面</title>
     <style>
         /* 样式可以根据需要进行调整 */
         body {
             font-family: 'Arial Black', Gadget, sans-serif;
+            text-align: center;
         }
 
         .game-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .game {
             width: 100%;
-            margin-bottom: 20px;
-            text-align: center;
+            margin-top: 20px;
         }
 
         iframe {
             width: 100%;
-            height: 100%;
+            height: 600px; /* 调整游戏页面的高度 */
             border: none;
         }
 
-        .game-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
+        #moreGames {
+            margin-top: 20px;
         }
 
-        #moreGames {
-            text-align: center;
-            margin-top: 20px;
+        button {
+            font-size: 16px;
+            margin: 5px;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
 
-<div class="game-container">
-    <div class="game">
-        <div class="game-title">Lucky Eraser</div>
-        <!-- 使用 iframe 嵌入第一个游戏，注意修改 src 属性 -->
-        <iframe src="examples/card.html"></iframe>
-    </div>
-
-    <div class="game">
-        <div class="game-title">Lucky Spin</div>
-        <!-- 使用 iframe 嵌入第二个游戏，注意修改 src 属性 -->
-        <iframe src="examples/dial.html"></iframe>
-    </div>
-
-    <div class="game">
-        <div class="game-title">Lucky Tiger</div>
-        <!-- 使用 iframe 嵌入第三个游戏，注意修改 src 属性 -->
-        <iframe src="examples/tiger.html"></iframe>
-    </div>
+<div class="game-container" id="gameContainer">
+    <!-- 游戏显示区域 -->
 </div>
 
-<!-- 添加更多游戏链接 -->
-<div id="moreGames">
-    <a href="https://www.luckycalico.ph/m/home?affiliateCode=lucky" target="_blank">More Games</a>
-    <!-- 在 target="_blank" 中 "_blank" 表示在新标签页中打开链接 -->
-</div>
+<!-- 按钮区域 -->
+<button onclick="showGame('examples/card.html')">Lucky Eraser</button>
+<button onclick="showGame('examples/dial.html')">Lucky Spin</button>
+<button onclick="showGame('examples/tiger.html')">Lucky Tiger</button>
+<button onclick="showMoreGames()">More Games</button>
+
+<script>
+    function showGame(gameUrl) {
+        // 隐藏之前的游戏
+        document.getElementById('gameContainer').innerHTML = '';
+
+        // 创建新的 iframe 元素用于显示游戏
+        var iframe = document.createElement('iframe');
+        iframe.src = gameUrl;
+        document.getElementById('gameContainer').appendChild(iframe);
+    }
+
+    function showMoreGames() {
+        // 打开 More Games 链接
+        window.open('https://www.luckycalico.ph/m/home?affiliateCode=lucky', '_blank');
+    }
+</script>
 
 </body>
 </html>
