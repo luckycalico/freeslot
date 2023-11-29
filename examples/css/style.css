@@ -489,8 +489,8 @@ body, button, input, textarea, select, option, pre, optgroup {
 
 .m-lottery-dial {
     position: relative;
-    width: 16rem;
-    min-height: 100%;
+    width: 10rem;
+    min-height: 70%;
     margin: 0 auto;
     padding-top: 7rem;
     background: url("../images/dial_page_bg.jpg") no-repeat #f94804;
